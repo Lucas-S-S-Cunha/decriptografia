@@ -54,7 +54,7 @@ splitValue.forEach(palavra => {
         verificarValoresRepetidos()
     
 async function findWords() {
-    const resposta = await fetch(`https://api.wordnik.com/v4/words.json/wordsWithSimilarMeanings?api_key=${apiKey}`)
+    const resposta = await fetch(apiLink)
     const palavras = await resposta.json()
     return palavras
 }
